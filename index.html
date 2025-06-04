@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Free online Brick Calculator (ईंट कैलकुलेटर) - Instantly calculate the number of bricks required for your wall. Enter wall, brick, window, and door dimensions in feet and inches. Perfect for construction planning." />
+  <meta name="keywords" content="brick calculator, ईंट कैलकुलेटर, wall brick calculator, construction calculator, bricks required, building material calculator, bricks for wall, bricks estimation, bricks in feet, bricks in inches, Hindi brick calculator" />
+  <title>Brick Calculator | ईंट कैलकुलेटर - Calculate Bricks for Your Room Online</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="Brick Calculator | ईंट कैलकुलेटर" />
+<meta property="og:description" content="Instantly calculate the number of bricks required for your wall. Enter wall, brick, window, and door dimensions in feet and inches." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://calculatebricksroom.mybillcalculator.com/" />
+<meta property="og:image" content="https://calculatebricksroom.mybillcalculator.com/brick_calculator.jpg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Brick Calculator | ईंट कैलकुलेटर" />
+<meta name="twitter:description" content="Calculate the number of bricks required for your wall project. Enter wall and brick dimensions to get an instant result." />
+<meta name="twitter:image" content="https://calculatebricksroom.mybillcalculator.com/brick_calculator.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Brick Calculator | ईंट कैलकुलेटर",
+  "url": "https://calculatebricksroom.mybillcalculator.com/",
+  "applicationCategory": "Calculator",
+  "operatingSystem": "All",
+  "description": "Free online brick calculator to estimate the number of bricks required for your wall. Enter wall, brick, window, and door dimensions in feet and inches.",
+  "inLanguage": ["en", "hi"]
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        Brick Calculator <span style="font-size:0.8em;">(ईंट कैलकुलेटर)</span>
+      </h1>
+      <p class="subtitle">
+        Calculate the Number of Bricks Needed for Your Room<br>
+        <span style="font-size:0.9em;">कमरे के लिए आवश्यक ईंटों की संख्या निकालें</span>
+      </p>
+    </header>
+    <main>
+      <form id="brickCalcForm" onsubmit="return false" aria-label="Brick Calculator Form">
+        <div style="display: flex; justify-content: flex-end;">
+          <div style="width: 100%; max-width: 500px;">
+            <!-- ROOM Section -->
+            <fieldset class="input-group">
+              <legend>
+                <strong>Room Details</strong> <span class="hi-label">(कमरे का विवरण)</span>
+                <br>
+                <span style="font-size:0.95em;color:#555;">(Calculation is for all four walls of the room)</span>
+              </legend>
+              <div class="input-row">
+                <label for="roomLength">Room Length (ft) <span class="hi-label">(कमरे की लंबाई)</span></label>
+                <input type="number" id="roomLength" placeholder="e.g. 16.4" min="0" step="0.01" required autocomplete="off"/>
+                <label for="roomWidth">Room Width (ft) <span class="hi-label">(कमरे की चौड़ाई)</span></label>
+                <input type="number" id="roomWidth" placeholder="e.g. 12.5" min="0" step="0.01" required autocomplete="off"/>
+                <label for="roomHeight">Room Height (ft) <span class="hi-label">(कमरे की ऊँचाई)</span></label>
+                <input type="number" id="roomHeight" placeholder="e.g. 8.2" min="0" step="0.01" required autocomplete="off"/>
+                <label for="wallWidth">Width of Wall (in) <span class="hi-label">(दीवार की मोटाई)</span></label>
+                <input type="number" id="wallWidth" placeholder="e.g. 9" min="0" step="0.01" required autocomplete="off"/>
+              </div>
+            </fieldset>
+            <!-- Brick Section -->
+            <fieldset class="input-group">
+              <legend><strong>Brick Details</strong> <span class="hi-label">(ईंट विवरण)</span></legend>
+              <div class="input-row">
+                <label for="brickLength">Brick Length (in) <span class="hi-label">(ईंट की लंबाई)</span></label>
+                <input type="number" id="brickLength" placeholder="e.g. 7.48" min="0" step="0.01" required autocomplete="off"/>
+                <label for="brickHeight">Brick Height (in) <span class="hi-label">(ऊँचाई)</span></label>
+                <input type="number" id="brickHeight" placeholder="e.g. 3.54" min="0" step="0.01" required autocomplete="off"/>
+                <label for="brickWidth">Brick Width (in) <span class="hi-label">(चौड़ाई)</span></label>
+                <input type="number" id="brickWidth" placeholder="e.g. 3.54" min="0" step="0.01" required autocomplete="off"/>
+                
+              </div>
+            </fieldset>
+            <!-- Window Section -->
+            <fieldset class="input-group">
+              <legend><strong>Window Details</strong> <span class="hi-label">(खिड़की विवरण)</span></legend>
+              <div class="input-row">
+                <label for="numWindows">No. of Windows <span class="hi-label">(खिड़कियों की संख्या)</span></label>
+                <input type="number" id="numWindows" placeholder="e.g. 2" min="0" step="1" value="0" autocomplete="off"/>
+                <label for="windowLength">Window Length (ft) <span class="hi-label">(लंबाई)</span></label>
+                <input type="number" id="windowLength" placeholder="e.g. 3.94" min="0" step="0.01" value="0" autocomplete="off"/>
+                <label for="windowHeight">Window Height (ft) <span class="hi-label">(ऊँचाई)</span></label>
+                <input type="number" id="windowHeight" placeholder="e.g. 3.94" min="0" step="0.01" value="0" autocomplete="off"/>
+              </div>
+            </fieldset>
+            <!-- Door Section -->
+            <fieldset class="input-group">
+              <legend><strong>Door Details</strong> <span class="hi-label">(दरवाजा विवरण)</span></legend>
+              <div class="input-row">
+                <label for="numDoors">No. of Doors <span class="hi-label">(दरवाजों की संख्या)</span></label>
+                <input type="number" id="numDoors" placeholder="e.g. 1" min="0" step="1" value="0" autocomplete="off"/>
+                <label for="doorLength">Door Length (ft) <span class="hi-label">(लंबाई)</span></label>
+                <input type="number" id="doorLength" placeholder="e.g. 2.95" min="0" step="0.01" value="0" autocomplete="off"/>
+                <label for="doorHeight">Door Height (ft) <span class="hi-label">(ऊँचाई)</span></label>
+                <input type="number" id="doorHeight" placeholder="e.g. 6.89" min="0" step="0.01" value="0" autocomplete="off"/>
+              </div>
+            </fieldset>
+            <button id="calculateBtn" type="submit" aria-label="Calculate Bricks">
+              CALCULATE BRICKS<br>
+              <span style="font-size:0.95em;color:#fff;">(ईंटों की संख्या निकालें)</span>
+            </button>
+          </div>
+        </div>
+      </form>
+      <section id="result" class="result" aria-live="polite"></section>
+    </main>
+    <footer>
+      <section>
+        <h2 style="font-size:1.1em;">About This Calculator <span class="hi-label">(इस कैलकुलेटर के बारे में)</span></h2>
+        <p>
+          Enter your wall and brick dimensions to estimate the number of bricks required for your construction project.<br>
+          <span style="color:#666;">अपनी दीवार और ईंट के माप दर्ज करें और आवश्यक ईंटों की संख्या जानें।</span>
+        </p>
+      </section>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
